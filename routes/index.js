@@ -11,6 +11,13 @@ router.get('/', function (req, res, next) {
     });
 });
 
+//TODO 区分开文件路由和请求
+router.get('/article', function (req, res, next) {
+    res.render('article', {
+        title: 'Express'
+    });
+});
+
 router.get('/getStudentInfo', function (req, res, next) {
     var ep = new EventProxy();
     connect({
